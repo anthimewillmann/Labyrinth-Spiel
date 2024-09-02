@@ -1,0 +1,62 @@
+Projekt-Dokumentation
+
+Java-Version
+
+	•	Java-Version: Oracle OpenJDK 22.0.1 - aarch64
+
+Entwicklungsumgebung
+
+	•	IDE: IntelliJ IDEA Community Edition (Version 2024.1.1)
+	•	Alternativ können auch andere Java-IDE verwendet werden.
+
+Spiel starten und spielen
+
+	1.	Projekt einrichten:
+	•	Entpacken Sie das Archiv.
+	•	Öffnen Sie das Projekt in einer Entwicklungsumgebung.
+	2.	Abhängigkeiten sicherstellen:
+	•	Sicherstellen, dass alle benötigten Bibliotheken und Bilder korrekt eingebunden sind.
+	•	Die Bilder sollten im Ressourcenordner (src/main/resources/view/) des Projekts gespeichert sein.
+	3.	Projekt kompilieren und ausführen:
+	•	Projekt kompilieren, um sicherzustellen, dass keine Kompilierungsfehler vorhanden sind.
+	•	Hauptklasse ausführen (Main.java), um das Spiel zu starten.
+	4.	Spiel spielen:
+	•	Beim Start des Spiels werden Sie aufgefordert, einen Schwierigkeitsgrad auszuwählen:
+	•	1 drücken für den einfachen Modus.
+	•	2 drücken für den mittleren Modus.
+	•	3 drücken für den schweren Modus.
+	•	Pfeiltasten auf der Tastatur verwenden, um den Spieler (#) durch das Labyrinth zu bewegen.
+	•	Ziel des Spiels ist es, das Ende (E) zu erreichen, ohne von den Verfolgern (*) gefangen zu werden.
+
+Eingebaute Features
+
+	1.	Verschiedene Schwierigkeitsgrade:
+	•	Das Spiel bietet drei Schwierigkeitsgrade: einfach, mittel und schwer. Diese Modi unterscheiden sich in der Anzahl, Geschwindigkeit und Zielstrebigkeit der Verfolger, die den Spieler jagen.
+	2.	Graphische Benutzeroberfläche (GUI):
+	•	Das Spiel verfügt über eine grafische Darstellung des Spielfelds. Jedes Element (Spieler, Verfolger, Start, Ende, Wände) wird mit entsprechenden Bildern dargestellt.
+	•	Der Spieler und die Verfolger bewegen sich auf einem Gitternetz, das das Spielfeld darstellt.
+	3.	Textuelle Anzeige (ConsoleView):
+	•	Neben der GUI gibt es eine textuelle Anzeige des Spielfelds. Diese kann zu Debugging-Zwecken oder als alternative Darstellung verwendet werden.
+	4.	Gewinn- und Verlustanzeige:
+	•	Das Spiel zeigt eine entsprechende Nachricht an, wenn der Spieler das Ende erreicht hat (Gewinn) oder von einem Verfolger gefangen wurde (Verloren).
+
+Funktionsweise der GUI
+
+	1.	Grafische Komponenten:
+	•	JPanel: Die GUI basiert auf einem JPanel, das alle grafischen Elemente enthält.
+	•	BufferedImage: Bilder für Spieler, Verfolger, Wände, Start- und Endpunkte sowie Hintergrundbilder werden als BufferedImage geladen und im paint-Methode des JPanel gezeichnet.
+	2.	Rendering:
+	•	Das paint-Methode des GraphicView-Panels zeichnet das Spielfeld und alle Elemente darauf.
+	•	Die Positionen der Elemente werden in einem World-Objekt verwaltet, welches die aktuellen Zustände der Spielfiguren und des Spielfelds speichert.
+	3.	Ereignissteuerung:
+	•	Die GUI reagiert auf Tastatureingaben des Spielers, um den Spielercharakter zu bewegen.
+	•	Der Zustand des Spiels wird kontinuierlich aktualisiert und die Anzeige wird entsprechend neu gezeichnet (repaint()).
+	4.	Modi-Auswahl:
+	•	Beim Start des Spiels wird ein Auswahlbildschirm angezeigt, auf dem der Spieler den Schwierigkeitsgrad wählen kann.
+	•	Die Auswahl erfolgt über Tastatureingaben (1, 2 oder 3).
+
+Weiterer Hinweis
+
+	•	Bilder: Stellen Sie sicher, dass alle Bilder im Ressourcenordner verfügbar sind. Falls ein Bild nicht geladen werden kann, wird ein Platzhalter verwendet.
+
+Viel Spaß beim Spielen!
